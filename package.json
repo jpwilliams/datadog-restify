@@ -1,0 +1,33 @@
+{
+  "name": "datadog-restify",
+  "version": "0.0.0",
+  "description": "Datadog middleware for Restify.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpwilliams/datadog-restify.git"
+  },
+  "keywords": [
+    "datadog",
+    "middleware",
+    "restify",
+    "api",
+    "node",
+    "response",
+    "time",
+    "code",
+    "status"
+  ],
+  "author": "Jack Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpwilliams/datadog-restify/issues"
+  },
+  "homepage": "https://github.com/jpwilliams/datadog-restify#readme",
+  "dependencies": {
+    "node-dogstatsd": "0.0.6"
+  }
+}
