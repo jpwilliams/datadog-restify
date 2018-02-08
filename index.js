@@ -16,9 +16,6 @@ module.exports = function (options) {
       req._startTime = new Date()
     }
 
-    req.port = port
-    req.host = host
-
     let end = res.end
 
     res.end = function (chunk, encoding) {
