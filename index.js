@@ -2,7 +2,7 @@ const DD = require('node-dogstatsd').StatsD
 
 module.exports = function (options) {
   const host = options.host || 'localhost'
-  const port = options.port || 8126
+  const port = options.port || 8125
   const datadog = new DD(host, port)
 
   const stat = options.stat || 'node.express.router'
