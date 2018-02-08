@@ -7,11 +7,16 @@ module.exports = function (options) {
   const path = options.path || false
   const baseUrl = options.base_url || false
   const responseCode = options.response_code || false
+  const host = process.env.STATSD_URL || options.host || 'localhost'
+  const port = process.env.STATSD_PORT || options.port || 8126
 
   return function (req, res, next) {
     if (!req._startTime) {
       req._startTime = new Date()
     }
+
+    req.port = port
+    req.host = host
 
     let end = res.end
 
