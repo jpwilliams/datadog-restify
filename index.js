@@ -1,14 +1,15 @@
 const DD = require('node-dogstatsd').StatsD
 
 module.exports = function (options) {
-  const datadog = options.dogstatsd || new DD()
+  const host = process.env.STATSD_URL || options.host || 'localhost'
+  const port = process.env.STATSD_PORT || options.port || 8126
+  const datadog = new DD(host, port)
+
   const stat = options.stat || 'node.express.router'
   const tags = options.tags || []
   const path = options.path || false
   const baseUrl = options.base_url || false
   const responseCode = options.response_code || false
-  const host = process.env.STATSD_URL || options.host || 'localhost'
-  const port = process.env.STATSD_PORT || options.port || 8126
 
   return function (req, res, next) {
     if (!req._startTime) {
