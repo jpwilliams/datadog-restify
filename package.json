@@ -1,6 +1,6 @@
 {
   "name": "datadog-restify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Datadog middleware for Restify.",
   "main": "index.js",
   "scripts": {
